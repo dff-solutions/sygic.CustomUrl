@@ -1,0 +1,13 @@
+{
+    "extends": "tslint:latest",
+    "rules": {
+        "eofline": true,
+        "indent": [true, "spaces"],
+        "max-line-length": [true, 120],
+        "no-console": [true],
+        "one-line": [false],
+        "ordered-imports": [false],
+        "trailing-comma": [false],
+        "variable-name": [true, "allow-leading-underscore", "ban-keywords", "check-format"]
+    }
+}
