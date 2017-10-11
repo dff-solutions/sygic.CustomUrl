@@ -1,6 +1,6 @@
 {
   "name": "sygic-custom-url",
-  "version": "1.0.1",
+  "version": "1.0.2-0",
   "description": "sygic custom url",
   "main": "./dist/sygic-custom-url.js",
   "module": "dist/index.js",
