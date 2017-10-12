@@ -1,6 +1,6 @@
 {
   "name": "sygic-custom-url",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "sygic custom url",
   "main": "./dist/umd/sygic-custom-url.js",
   "module": "dist/esm/index.js",
