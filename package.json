@@ -1,6 +1,6 @@
 {
   "name": "sygic-custom-url",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "sygic custom url",
   "main": "./dist/umd/sygic-custom-url.js",
   "module": "dist/esm/index.js",
@@ -16,7 +16,7 @@
     "compodoc": "gulp compodoc",
     "precompodoc": "rimraf docs",
     "prepare": "npm run build",
-    "prepublishOnly": "npm run test-ci && npm run compodoc",
+    "prepublishOnly": "npm run test-ci",
     "test-ci": "karma start ./test-config/karma.conf.ts --single-run",
     "test": "karma start ./test-config/karma.conf.ts"
   },
