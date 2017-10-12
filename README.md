@@ -1,5 +1,15 @@
 # sygic-custom-url
 
+## Descriptions
+
+Generates custom URLs for sygic app URL Scheme `com.sygic.aura`.
+Abstracts
+[**Android**](https://www.sygic.com/developers/professional-navigation-sdk/android/api-examples/custom-url) and
+[**iOS**](https://www.sygic.com/developers/professional-navigation-sdk/ios/custom-url)
+schemes.
+
+See Sygic documentation for more details [Sygic Professional Navigation](https://www.sygic.com/developers/professional-navigation-sdk).
+
 ## Install
 `npm i --save sygic-custom-url`
 
