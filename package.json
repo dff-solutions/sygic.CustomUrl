@@ -20,6 +20,9 @@
     "test-ci": "karma start ./test-config/karma.conf.ts --single-run",
     "test": "karma start ./test-config/karma.conf.ts"
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/frankkoenigstein/sygic-custom-url.git"
