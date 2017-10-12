@@ -16,7 +16,7 @@
     "compodoc": "gulp compodoc",
     "precompodoc": "rimraf docs",
     "prepare": "npm run build",
-    "prepublishOnly": "npm run test-ci",
+    "prepublishOnly": "npm run test-ci && npm run compodoc",
     "test-ci": "karma start ./test-config/karma.conf.ts --single-run",
     "test": "karma start ./test-config/karma.conf.ts"
   },
