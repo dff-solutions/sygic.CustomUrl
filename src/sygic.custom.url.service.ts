@@ -1,45 +1,45 @@
-export const enum ACTION_TYPE {
-    SHOW = "show",
-    DRIVE = "drive",
-    WALK = "walk"
-}
+export const ACTION_TYPE = {
+    DRIVE: "drive",
+    SHOW: "show",
+    WALK: "walk"
+};
 
-export const enum ACTION {
-    ADDRESS = "address",
-    COORDINATE = "coordinate",
-    ROUTE = "route",
-    URL = "url",
-    MYSYGIC = "mysygic",
-    MYSYGICPRODUCT = "mysygicproduct",
-    MYSYGICBUY = "mysygicbuy",
-    RESTORE = "restore",
-    TRUCKSETTINGS = "truckSettings",
-    ACTIVATE = "activate",
-    BACK_BUTTON = "back_button",
-    COORDINATEADDR = "coordinateaddr",
-    DEVICECODE = "deviceCode",
-    GPSLOG = "gpslog",
-    LOGIN = "login",
-    SETTINGSOVERWRITE = "settingsOverwrite",
-    UPDATE = "update"
-}
+export const ACTION = {
+    ACTIVATE: "activate",
+    ADDRESS: "address",
+    BACK_BUTTON: "back_button",
+    COORDINATE: "coordinate",
+    COORDINATEADDR: "coordinateaddr",
+    DEVICECODE: "deviceCode",
+    GPSLOG: "gpslog",
+    LOGIN: "login",
+    MYSYGIC: "mysygic",
+    MYSYGICBUY: "mysygicbuy",
+    MYSYGICPRODUCT: "mysygicproduct",
+    RESTORE: "restore",
+    ROUTE: "route",
+    SETTINGSOVERWRITE: "settingsOverwrite",
+    TRUCKSETTINGS: "truckSettings",
+    UPDATE: "update",
+    URL: "url"
+};
 
-export const enum TRUCK_ROUTING_TYPE {
-    CAMPER = "cmp",
-    CAR = "car",
-    TRUCK = "tru",
-    VAN = "van"
-}
+export const TRUCK_ROUTING_TYPE = {
+    CAMPER: "cmp",
+    CAR: "car",
+    TRUCK: "tru",
+    VAN: "van"
+};
 
 export interface ITruckSettings {
-    [key: string]: number | TRUCK_ROUTING_TYPE;
+    [key: string]: number | string;
     mxs?: number; // defines maximum speed in km/h e.g. mxs=90
     wei?: number; // defines total weight in kilograms e.g. wei=15000
     axw?: number; // defines maximum axle weight in kilograms e.g. axw=1200
     len?: number; // defines length in milimeters e.g. len=7800
     wid?: number; // defines width in milimeters e.g. wid=2450
     hei?: number; // defines height in milimeters e.g. hei=3450
-    rou?: TRUCK_ROUTING_TYPE; // defines routing type, where the possible values are:
+    rou?: string; // defines routing type, where the possible values are:
                               // car, tru(truck), cmp(camper), van e.g.rou = tru
 }
 
@@ -349,7 +349,7 @@ export class CustomUrlService {
     }
 
     public multipleActions(actions: [{
-        action: ACTION,
+        action: string,
         args: any[]
     }]): string {
         const path: string = this.prepareActions(actions);
@@ -364,7 +364,7 @@ export class CustomUrlService {
      *
      * @returns {string} Url;
      */
-    private genCustomUrl(action: ACTION, ...args: any[]): string {
+    private genCustomUrl(action: string, ...args: any[]): string {
         const options: string = this.prepareAction(action, ...args);
         return this.getCustomUrl(options);
     }
@@ -385,7 +385,7 @@ export class CustomUrlService {
      * @returns {string} Actions prepared for custom url
      */
     private prepareActions(actions: [{
-        action: ACTION,
+        action: string,
         args: any[]
     }]): string {
         return actions
@@ -400,7 +400,7 @@ export class CustomUrlService {
      * @param {any[]} args Args for custom url. including action.
      * @returns {string} Args prepared for url.
      */
-    private prepareAction(action: ACTION, ...args: any[]): string {
+    private prepareAction(action: string, ...args: any[]): string {
         args.unshift(action);
         return this.prepareOptions(args);
     }
