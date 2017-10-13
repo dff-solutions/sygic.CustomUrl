@@ -1,10 +1,10 @@
-export enum ACTION_TYPE {
+export const enum ACTION_TYPE {
     SHOW = "show",
     DRIVE = "drive",
     WALK = "walk"
 }
 
-export enum ACTION {
+export const enum ACTION {
     ADDRESS = "address",
     COORDINATE = "coordinate",
     ROUTE = "route",
@@ -24,7 +24,7 @@ export enum ACTION {
     UPDATE = "update"
 }
 
-export enum TRUCK_ROUTING_TYPE {
+export const enum TRUCK_ROUTING_TYPE {
     CAMPER = "cmp",
     CAR = "car",
     TRUCK = "tru",
