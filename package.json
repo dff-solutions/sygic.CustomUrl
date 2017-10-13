@@ -1,6 +1,6 @@
 {
   "name": "sygic-custom-url",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "sygic custom url",
   "module": "dist/esm/index.js",
   "typings": "dist/esm/index.d.ts",
